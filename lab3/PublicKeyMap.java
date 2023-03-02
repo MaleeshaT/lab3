@@ -110,5 +110,11 @@ public class PublicKeyMap {
 	}
     }
 
-
-}    
+    public void print()
+        throws NoSuchAlgorithmException {
+        for (String key : getUsers()){
+	    System.out.println("Keyname = " + key);
+	    System.out.println("Public key = " + getPublicKeyString(key));
+	}
+    }    
+}

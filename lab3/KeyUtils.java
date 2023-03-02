@@ -22,6 +22,14 @@ public class KeyUtils{
 	return Base64.getEncoder().encodeToString(pbk.getEncoded());
     }
 
+    /* this prints out a private key in a readable format */    
+
+    public static String privateKeyToString(PrivateKey prvk) throws NoSuchAlgorithmException{
+	return Base64.getEncoder().encodeToString(prvk.getEncoded());
+    }
+
+
+
 
     /* Messages to be signed are formed from the amounts (which are integers)
          and public keys 

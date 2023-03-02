@@ -92,6 +92,11 @@ public class Wallet {
         return keyName2PrivateKey.get(keyName);
     }
 
+    public String getPrivateKeyString(String keyName)throws NoSuchAlgorithmException {
+        return KeyUtils.privateKeyToString(getPrivateKey(keyName));
+    };
+    
+
     /* obtain the set of keyNames */    
     public Set<String> getKeyNames(){
         return publicKeyMap.getUsers();
@@ -125,4 +130,12 @@ public class Wallet {
         return signMessage(outList.getMessageToSign(sender,amount),getKeyName(sender));
             }
 
+    public void print()
+        throws NoSuchAlgorithmException, SignatureException, InvalidKeyException {
+        for (String key : getKeyNames()){
+	    System.out.println("Keyname = " + key);
+	    System.out.println("Public key = " + getPublicKeyString(key));
+	    System.out.println("Private key = " + getPrivateKeyString(key));	    
+	}
+    }
 }    
