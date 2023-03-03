@@ -47,7 +47,7 @@ public class UserAmount {
      */
     
     public UserAmount(Hashtable<PublicKey, Integer> userAmountBase) {
-	userAmountBase = userAmountBase;
+	this.userAmountBase = userAmountBase;
 	publicKeyList = new ArrayList<PublicKey>();	
 	for (PublicKey pbk : userAmountBase.keySet()){
 	    publicKeyList.add(pbk);

@@ -118,7 +118,7 @@ public class Input{
            (The OutputList is needed to determine the message to be signed which
             consists of the sender, amount, and the public keys and amounts for
             each output.
-            It is computed in the method getMessageToSign  of InputList.java) 
+            It is computed in the method getMessageToSign  of InputUnsigned.java) 
 
         This can be done by getting the underlying InputUnsigned
         and executing the method checkSignature for it referring to the OutputList
