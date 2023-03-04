@@ -117,8 +117,7 @@ public class Input{
         Check the signature is correct for a given OutputList.
            (The OutputList is needed to determine the message to be signed which
             consists of the sender, amount, and the public keys and amounts for
-            each output.
-            It is computed in the method getMessageToSign  of InputUnsigned.java) 
+            each output.It is computed in the method getMessageToSign  of InputUnsigned.java) 
 
         This can be done by getting the underlying InputUnsigned
         and executing the method checkSignature for it referring to the OutputList
@@ -127,13 +126,23 @@ public class Input{
         In order for the code to compile it has been defined in the questions as true
         but that should be replaced by the correct value.
     **/
-
+//
     public boolean checkSignature(OutputList outList){
-	// to be replaced by the correct code
-	return true;
-    }
+	// to be replaced by the correct code 	
+            InputUnsigned inputUnsigned = toInputUnsigned();
+            return inputUnsigned.checkSignature(outList, signature);
+        }
+    	
+////	return true;
+////    }
 
 
+
+
+
+    
+    
+      
     /** 
      * Print the entry in the form word1  <sender> word2 <amount>
      *
