@@ -41,14 +41,6 @@ The tasks are as follows (the methods mentioned are set in case of return value 
 to always true, so that the code compiles – those return values need to be replaced by the
 correct values):
 
-Task 1: Define in Input.java the method checkSignature(outList). You can
-used the checkSignature method of InputUnsigned.java and the constructor of
-InputUnsigned.java which uses as argument an element of Input.
-(3 marks + 1 mark for sign off)
-
-Task 2: Define in InputList.java the method checkSignature(outList). You can
-refer to your solution of Task 1.
-(3 marks + 1 mark for sign off)
 
 2
 Task 3: Define in Transaction.java the method checkSignaturesValid() which
