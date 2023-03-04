@@ -234,9 +234,24 @@ public class InputList{
          but that should be adapted.
     **/
 
-    public boolean checkSignature(OutputList outList){
-	// to be replaced by the correct code	
-	return true;
+//    public boolean checkSignature(OutputList outList){
+//	// to be replaced by the correct code	
+//    	
+//    	
+//	return true;
+//    }
+
+    public boolean checkSignature(OutputList outList) {
+        // Iterate over all inputs in the list
+        for (Input input : inputList) {
+            // Check the signature for this input against the given output list
+            if (!input.checkSignature(outList)) {
+                // If any signature check fails, return false immediately
+                return false;
+            }
+        }
+        // If all signature checks pass, return true
+        return true;
     }
 
 
